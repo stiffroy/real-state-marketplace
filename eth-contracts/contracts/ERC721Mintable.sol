@@ -538,7 +538,7 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 //  Create CustomERC721Token contract that inherits from the ERC721Metadata contract. You can name this contract as you please
 contract BariToken is ERC721Metadata {
     string private _name = "Bari";
-    string private _symbol = "DAG";
+    string private _symbol = "BARI";
     string private _baseTokenURI = "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/";
 
     //  1) Pass in appropriate values for the inherited ERC721Metadata contract
