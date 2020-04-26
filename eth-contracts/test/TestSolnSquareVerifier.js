@@ -23,8 +23,7 @@ contract('SolnSquareVerifier', accounts => {
                 proofJson.proof.a,
                 proofJson.proof.b,
                 proofJson.proof.c,
-                proofJson.inputs,
-                tokenId
+                proofJson.inputs
             );
             result = await this.contract.addSolution(10, accounts[1], key);
 

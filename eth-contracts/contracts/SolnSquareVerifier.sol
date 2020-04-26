@@ -60,7 +60,7 @@ contract SolnSquareVerifier is BariToken {
         bool verification = squareVerifier.verifyTx(a, b, c, input);
         require(verification, "Zokrates verification failed");
         //  - make sure you handle metadata as well as tokenSupply
-        bytes32 _key = generateSolutionKey(a, b, c, input, tokenId);
+        bytes32 _key = generateSolutionKey(a, b, c, input);
         require(solutionsMap[_key].addr == address(0), "Solution already exists");
         addSolution(tokenId, to, _key);
 
@@ -73,13 +73,12 @@ contract SolnSquareVerifier is BariToken {
         uint[2] memory a,
         uint[2][2] memory b,
         uint[2] memory c,
-        uint[2] memory input,
-        uint256 tokenId
+        uint[2] memory input
     )
     public
     pure
     returns (bytes32)
     {
-        return keccak256(abi.encodePacked(a, b, c, input, tokenId));
+        return keccak256(abi.encodePacked(a, b, c, input));
     }
 }
