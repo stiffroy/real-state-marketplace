@@ -19,6 +19,12 @@ Later the items were deployed to the [OpenSea](https://rinkeby.opensea.io) Marke
 All the items were owned by "StiffR1" and then 5 of them were sold to "StiffR2" through OpenSea marketplace.
 .
 
+# Testing
+To test the smart contracts, please go to the folder `eth-contracts` and either run `truffle test` or go into the development console of truffle:
+`truffle develop` and execute `test`.
+
+NOTE: make sure the npm packages are installed before running the test by executing `npm install` in your base directory.
+
 # Project Resources
 
 * [Remix - Solidity IDE](https://remix.ethereum.org/)
